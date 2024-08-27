@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --color-primario: #93A8AC;
+    --color-secundario: #424B54;
+    --color-terciario: #210679;
+    --color-letras: #FFFFFF;
+    --fuente-poppins: "Poppins", sans-serif;
+}
+
+
+*{
+    background: var(--color-primario);
+    font-family: var(--fuente-poppins);
+    font-weight: 400;
+    font-size: 32px;
+}
+#izquierda{
+    display: block;
+    width: 70%;
+    float: left;
+}
+#derecha{
+    display: block;
+    width: 30%;
+    float: left;
+}
+
+.header-logo {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 3%;
+}
+
+main {
+    width: 100%;
+    display: flex;
+}
+
+.text-area { 
+    border: none;
+    color: var(--color-letras);
+    margin-top: 50px;
+    height: 14em;
+    text-transform: lowercase;
+}
+
+::placeholder { color: var(--color-terciario)}
+    .text-area:focus {
+        outline: none;
+    }
+
+
+.mensaje {
+    background: var(--color-secundario);
+    background-image: url(imagenes/Muñeco.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none; 
+    border-radius: 24px;
+    color: var(--color-letras);
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
+    height: 25em;
+    position: fixed;
+}
+
+.mensaje:focus {
+    outline: none 
+}
+
+.botones {
+    display: flex; 
+    margin: 0 auto;
+    margin-top: 18px; 
+    
+}
+
+.boton-encriptar {
+    background-color: var(--color-secundario); 
+    border: 1px solid var(--color-letras); 
+    border-radius: 24px;
+    color: var(--color-letras);
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.boton-desencriptar {
+    background: var(--color-secundario);
+    border: 1px solid var(--color-letras);
+    border-radius: 24px;
+    color: var(--color-letras);
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.boton-copiar {
+    background: var(--color-secundario);
+    border: 1px solid var(--color-letras);
+    border-radius: 24px;
+    color: var(--color-letras);
+    cursor: pointer;
+    height: 67px;
+    margin-left: 108px;
+    margin-top: 21em;
+    position: absolute;
+    width: 336px;
+}
+
+.informacion { 
+    color: var(--color-letras);
+    font-size: 18px;
+}
+
+.copyright{
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 2px solid var(--fuente-inter);
+    color: var(--color-letras);
+    text-align: justify;
+    height: 5px;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--color-letras)
+}
+
+.footer-linked {
+    margin-top: 10px; 
+    margin-left: 10px;  
+    width: 2%;
+}
+
+.footer-git {
+    margin-top: 10px;  
+    margin-left: 10px; 
+    width: 2%; 
+}
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media only screen and (min-width: 1024px) {
+    #izquierda {
+        width: 70%;
+        float: left;
+    }
+
+    #derecha {
+        width: 30%;
+        float: left;
+    }
+
+    .mensaje {
+        position: fixed;
+        margin-left: 98px;
+        margin-top: 20px;
+        height: 25em;
+    }
+
+    .boton-copiar {
+        margin-left: 108px;
+        margin-top: 21em;
+        position: absolute;
+    }
+}
+
+/* Estilos para tablets (pantallas medianas) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    #izquierda, #derecha {
+        width: 100%;
+        float: none;
+    }
+
+    .mensaje {
+        margin: 20px auto;
+        width: 90%;
+        height: 20em;
+        background-size: contain;
+        position: static;
+    }
+
+    .boton-copiar {
+        margin: 20px auto;
+        width: 90%;
+        position: static;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton-encriptar,
+    .boton-desencriptar {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+/* Estilos para móviles (pantallas pequeñas) */
+@media only screen and (max-width: 767px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #izquierda, #derecha {
+        width: 100%;
+        float: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-logo {
+        width: 20%;
+    }
+
+    .text-area, .mensaje {
+        width: 90%;
+        margin: 10px auto;
+        height: 8em; /* Reducir altura */
+    }
+
+    .mensaje {
+        margin-top: 10px;
+        background-size: contain;
+        position: static;
+        background-image: none;
+    }
+
+    .boton-copiar {
+        margin-top: 10px;
+        width: 90%;
+        position: static;
+       
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .boton-encriptar,
+    .boton-desencriptar {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .footer-linked,
+    .footer-git {
+        width: 5%;
+        margin: 10px 5px;
+    }
+}
+
+
